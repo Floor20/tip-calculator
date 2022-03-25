@@ -1,0 +1,16 @@
+$primary-color: hsl(185, 41%, 84%);
+$secondary-color: hsl(183, 100%, 15%);
+$font-color: hsl(186, 14%, 43%);
+$display-color: hsl(172, 67%, 45%);
+$hover-color: hsl(177, 63%, 71%);
+$font-stack: "Space Mono", sans-serif;
+$input-background: hsl(189, 41%, 97%);
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li:focus {
+  outline: none;
+}

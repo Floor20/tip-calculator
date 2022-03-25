@@ -1,0 +1,301 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li:focus {
+  outline: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #c5e4e7;
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------- */
+/* CALCULATOR STYLES */
+/* ---------------------------------------------- */
+.calc-container {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  width: 900px;
+  height: 460px;
+  max-width: 95%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 2rem;
+  gap: 0 2rem;
+}
+
+.data-side {
+  width: 50%;
+}
+
+.display-side {
+  background-color: #00494d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 50%;
+  border-radius: 10px;
+  padding: 3rem 2.5rem 2.5rem;
+}
+
+.input-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 100%;
+}
+
+.input-list input {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #f4fafa;
+  color: #5e7a7d;
+  font-family: "Space Mono", sans-serif;
+  font-size: 1.2rem;
+  text-align: right;
+  margin-top: 5px;
+}
+
+.input-list input:focus {
+  outline: none;
+}
+
+.bill-section input {
+  background: url("../../../images/icon-dollar.svg") no-repeat;
+  background-color: #f4fafa;
+  background-position: left 1em top 1em;
+}
+
+.bill-section input:focus {
+  border: 2px solid #26c0ab;
+}
+
+label,
+p {
+  color: #5e7a7d;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.tip-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tip-grid .tip-tile:not(:last-child) {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.tip-grid .tip-tile:not(:last-child):hover {
+  background-color: #86e4df;
+  color: #00494d;
+  cursor: pointer;
+}
+
+.tip-tile:last-child {
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  background-color: #f4fafa;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+.tip-tile:last-child a {
+  color: inherit;
+}
+
+.tip-tile:last-child:hover {
+  background-color: #86e4df;
+  color: #00494d;
+  cursor: pointer;
+}
+
+.tip-tile:last-child:focus {
+  border: 2px solid #26c0ab;
+}
+
+.tip-line {
+  margin-bottom: 30px;
+}
+
+.tip-line,
+.total-line {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.tip-amount,
+.total-amount {
+  color: #26c0ab;
+  font-size: 2.5rem;
+  position: relative;
+  bottom: 12px;
+}
+
+.amount-info li:nth-child(2) {
+  color: #5e7a7d;
+  font-size: 0.8rem;
+}
+
+.people-section input {
+  background: url("../../../images/icon-person.svg") no-repeat;
+  background-color: #f4fafa;
+  background-position: left 1em top 1em;
+}
+
+.people-section .people-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
+  background-color: #247b84;
+  color: #00494d;
+  font-weight: 700;
+  text-transform: uppercase;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+
+button:hover {
+  background-color: #86e4df;
+  color: #00494d;
+  cursor: pointer;
+}
+
+/* ---------------------------------------------- */
+/* JS BEHAVIOR */
+/* ---------------------------------------------- */
+.btn-bg1 {
+  background-color: #00494d;
+}
+
+.btn-bg2 {
+  background-color: #26c0ab;
+}
+
+.btn-font1 {
+  color: white;
+}
+
+.btn-font2 {
+  color: #00494d;
+}
+
+.last-btn-font {
+  color: #5e7a7d;
+}
+
+.err-border {
+  border: 2px solid #ff7a7a;
+}
+
+.people-err {
+  color: #ff7a7a;
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------------------------------------------- */
+/* QUERIES */
+/* ---------------------------------------------- */
+@media only screen and (max-width: 600px) {
+  .calc-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto;
+    padding: 1.5rem;
+  }
+  .data-side,
+  .display-side {
+    width: 100%;
+  }
+  .bill-section,
+  .tip-section,
+  .people-section {
+    margin-bottom: 30px;
+  }
+  .display-side {
+    padding: 2rem 1rem 1rem;
+  }
+  .tip-line,
+  .total-line {
+    margin-bottom: 30px;
+  }
+  .tip-amount,
+  .total-amount {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .tip-grid {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}

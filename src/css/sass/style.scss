@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+@import "config";
+@import "inputs";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $primary-color;
+  font-family: $font-stack;
+  font-weight: 700;
+}
+
+/* ---------------------------------------------- */
+/* CALCULATOR STYLES */
+/* ---------------------------------------------- */
+
+.calc-container {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  position: fixed;
+  width: 900px;
+  height: 460px;
+  max-width: 95%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 2rem;
+  gap: 0 2rem;
+}
+
+.data-side {
+  width: 50%;
+}
+
+.display-side {
+  background-color: $secondary-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  border-radius: 10px;
+  padding: 3rem 2.5rem 2.5rem;
+}
+
+.input-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+
+  input {
+    @include button-layout;
+    background-color: $input-background;
+    color: $font-color;
+    font-family: $font-stack;
+    font-size: 1.2rem;
+    text-align: right;
+    margin-top: 5px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.bill-section {
+  input {
+    @include input-icon("../../../images/icon-dollar.svg");
+
+    &:focus {
+      border: 2px solid $display-color;
+    }
+  }
+}
+
+label,
+p {
+  color: $font-color;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 10px;
+
+  .tip-tile:not(:last-child) {
+    @include tip-box-layout;
+    // background-color: $secondary-color;
+    // color: hsl(0, 0%, 100%);
+    transition: background-color 0.2s linear;
+
+    &:hover {
+      background-color: $hover-color;
+      color: $secondary-color;
+      cursor: pointer;
+    }
+
+    // &:focus {
+    //   background-color: $display-color;
+    //   color: $secondary-color;
+    // }
+  }
+}
+
+.tip-tile:last-child {
+  @include tip-box-layout;
+  background-color: $input-background;
+  transition: background-color 0.2s linear;
+
+  a {
+    color: inherit;
+  }
+
+  &:hover {
+    background-color: $hover-color;
+    color: $secondary-color;
+    cursor: pointer;
+  }
+
+  &:focus {
+    border: 2px solid $display-color;
+  }
+}
+
+.tip-line {
+  margin-bottom: 30px;
+}
+
+.tip-line,
+.total-line {
+  color: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: space-between;
+}
+
+.tip-amount,
+.total-amount {
+  color: $display-color;
+  font-size: 2.5rem;
+  position: relative;
+  bottom: 12px;
+}
+
+.amount-info {
+  li:nth-child(2) {
+    color: $font-color;
+    font-size: 0.8rem;
+  }
+}
+
+.people-section {
+  input {
+    @include input-icon("../../../images/icon-person.svg");
+  }
+
+  .people-row {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+button {
+  @include button-layout;
+  background-color: hsl(186, 57%, 33%);
+  color: $secondary-color;
+  font-weight: 700;
+  text-transform: uppercase;
+  transition: background-color 0.2s linear;
+
+  &:hover {
+    background-color: $hover-color;
+    color: $secondary-color;
+    cursor: pointer;
+  }
+}
+
+/* ---------------------------------------------- */
+/* JS BEHAVIOR */
+/* ---------------------------------------------- */
+
+.btn-bg1 {
+  background-color: $secondary-color;
+}
+
+.btn-bg2 {
+  background-color: $display-color;
+}
+
+.btn-font1 {
+  color: hsl(0, 0%, 100%);
+}
+
+.btn-font2 {
+  color: $secondary-color;
+}
+
+.last-btn-font {
+  color: $font-color;
+}
+
+.err-border {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+
+.people-err {
+  color: hsl(0, 100%, 74%);
+  text-align: right;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---------------------------------------------- */
+/* QUERIES */
+/* ---------------------------------------------- */
+
+@media only screen and (max-width: 600px) {
+  .calc-container {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .data-side,
+  .display-side {
+    width: 100%;
+  }
+
+  .bill-section,
+  .tip-section,
+  .people-section {
+    margin-bottom: 30px;
+  }
+
+  .display-side {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .tip-line,
+  .total-line {
+    margin-bottom: 30px;
+  }
+
+  .tip-amount,
+  .total-amount {
+    font-size: 1.7rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .tip-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

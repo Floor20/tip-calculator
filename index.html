@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" type="text/css" href="./src/css/css/style.css" />
+    <script defer src="./src/css/js/script.js"></script>
+
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+
+  <body>
+    <div class="calc-container">
+      <div class="data-side">
+        <ul class="input-list">
+          <li class="bill-section">
+            <label for="bill"> Bill </label><br /><input
+              type="text"
+              inputmode="numeric"
+              id="bill"
+              name="bill"
+              placeholder="0"
+            />
+          </li>
+          <li class="tip-section">
+            <p>Select Tip %</p>
+            <ul class="tip-grid">
+              <li class="tip-tile btn-bg1 btn-font1" tabindex="0">
+                <a href="#">5%</a>
+              </li>
+              <li class="tip-tile btn-bg1 btn-font1" tabindex="0">
+                <a href="#">10%</a>
+              </li>
+              <li class="tip-tile btn-bg1 btn-font1" tabindex="0">
+                <a href="#">15%</a>
+              </li>
+              <li class="tip-tile btn-bg1 btn-font1" tabindex="0">
+                <a href="#">25%</a>
+              </li>
+              <li class="tip-tile btn-bg1 btn-font1" tabindex="0">
+                <a href="#">50%</a>
+              </li>
+              <li class="tip-tile btn-bg1 last-btn-font" tabindex="0">
+                <a href="#">Custom</a>
+              </li>
+            </ul>
+          </li>
+          <li class="people-section">
+            <ul class="people-row">
+              <li><label for="people-number">Number of People</label></li>
+              <li><span class="people-err hidden">Can't be zero.</span></li>
+            </ul>
+            <input
+              type="text"
+              inputmode="numeric"
+              id="people-number"
+              name="people-number"
+              placeholder="0"
+            />
+          </li>
+        </ul>
+      </div>
+      <div class="display-side">
+        <div class="tip-stats">
+          <ul class="tip-line">
+            <li>
+              <ul class="amount-info">
+                <li>Tip Amount</li>
+                <li>/ person</li>
+              </ul>
+            </li>
+            <li><span class="tip-amount">$0.00</span></li>
+          </ul>
+          <ul class="total-line">
+            <li>
+              <ul class="amount-info">
+                <li>Total</li>
+                <li>/ person</li>
+              </ul>
+            </li>
+            <li><span class="total-amount">$0.00</span></li>
+          </ul>
+        </div>
+
+        <button type="reset" value="Reset" name="reset">Reset</button>
+      </div>
+    </div>
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
