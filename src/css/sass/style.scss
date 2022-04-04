@@ -72,6 +72,7 @@ body {
 .bill-section {
   input {
     @include input-icon("../../../images/icon-dollar.svg");
+    padding: 0.8rem;
 
     &:focus {
       border: 2px solid $display-color;
@@ -102,6 +103,10 @@ ul {
       background-color: $hover-color;
       color: $secondary-color;
       cursor: pointer;
+    }
+
+    .custom-tip {
+      padding: 0.5rem;
     }
   }
 }
@@ -156,6 +161,7 @@ ul {
 .people-section {
   input {
     @include input-icon("../../../images/icon-person.svg");
+    padding: 0.8rem;
   }
 
   .people-row {
@@ -215,7 +221,3 @@ button {
 .hidden {
   display: none;
 }
-
-/* ---------------------------------------------- */
-/* QUERIES */
-/* ---------------------------------------------- */

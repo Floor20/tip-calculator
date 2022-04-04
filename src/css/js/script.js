@@ -10,22 +10,6 @@ const totalAmount = document.querySelector(".total-amount");
 const peopleErrMsg = document.querySelector(".people-err");
 const resetBtn = document.querySelector("button");
 
-// tipTiles.forEach((el) => {
-//   el.addEventListener("click", (e) => {
-//     tipTiles.forEach((tile) => {
-//       if (tile.classList.contains("btn-bg2")) {
-//         tile.classList.remove("btn-bg2");
-//         tile.classList.remove("btn-font2");
-//       }
-
-//       e.currentTarget.classList.add("btn-bg2");
-//       e.currentTarget.classList.add("btn-font2");
-//     });
-
-//     renderTip();
-//   });
-// });
-
 tipTiles.forEach((el) => {
   tipTiles.forEach((tile) => {
     tile.classList.remove("tip-tile");
@@ -43,6 +27,8 @@ tipTiles.forEach((el) => {
       e.currentTarget.classList.replace("btn-bg1", "btn-bg2");
       e.currentTarget.classList.replace("btn-font1", "btn-font2");
     });
+
+    renderTip();
   });
 });
 
@@ -120,20 +106,3 @@ resetBtn.addEventListener("click", function () {
     });
   }
 });
-
-// resetBtn.addEventListener("click", function () {
-//   if (totalAmount.textContent !== 0) {
-//     totalAmount.textContent = "$0.00";
-//     tipAmount.textContent = "$0.00";
-//     billField.value = 0;
-//     peopleField.value = 0;
-//     resetBtn.classList.remove("btn-bg2");
-
-//     tipTiles.forEach((tile) => {
-//       if (tile.classList.contains("btn-bg2")) {
-//         tile.classList.remove("btn-bg2");
-//         tile.classList.remove("btn-font2");
-//       }
-//     });
-//   }
-// });
