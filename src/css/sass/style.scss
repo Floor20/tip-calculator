@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
 @import "config";
 @import "inputs";
+@import "queries";
 
 * {
   margin: 0;
@@ -218,42 +219,3 @@ button {
 /* ---------------------------------------------- */
 /* QUERIES */
 /* ---------------------------------------------- */
-
-@media only screen and (max-width: 600px) {
-  .calc-container {
-    flex-direction: column;
-    height: auto;
-    padding: 1.5rem;
-  }
-
-  .data-side,
-  .display-side {
-    width: 100%;
-  }
-
-  .bill-section,
-  .tip-section,
-  .people-section {
-    margin-bottom: 30px;
-  }
-
-  .display-side {
-    padding: 2rem 1rem 1rem;
-  }
-
-  .tip-line,
-  .total-line {
-    margin-bottom: 30px;
-  }
-
-  .tip-amount,
-  .total-amount {
-    font-size: 1.7rem;
-  }
-}
-
-@media only screen and (max-width: 375px) {
-  .tip-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
