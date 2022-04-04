@@ -95,8 +95,6 @@ ul {
 
   .tip-tile:not(:last-child) {
     @include tip-box-layout;
-    // background-color: $secondary-color;
-    // color: hsl(0, 0%, 100%);
     transition: background-color 0.2s linear;
 
     &:hover {
@@ -104,16 +102,12 @@ ul {
       color: $secondary-color;
       cursor: pointer;
     }
-
-    // &:focus {
-    //   background-color: $display-color;
-    //   color: $secondary-color;
-    // }
   }
 }
 
 .tip-tile:last-child {
   @include tip-box-layout;
+  color: unset;
   background-color: $input-background;
   transition: background-color 0.2s linear;
 
