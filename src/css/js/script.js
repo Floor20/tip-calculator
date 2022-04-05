@@ -30,7 +30,6 @@ tipTiles.forEach((el) => {
     });
 
     renderTip();
-    console.log(typeof Number(customTipField.value));
   });
 });
 
