@@ -152,8 +152,6 @@ ul {
 }
 
 .tip-tile:last-child:hover {
-  background-color: #86e4df;
-  color: #00494d;
   cursor: pointer;
 }
 
@@ -264,6 +262,7 @@ button:hover {
 /* ---------------------------------------------- */
 /* QUERIES */
 /* ---------------------------------------------- */
+
 @media only screen and (max-width: 600px) {
   .calc-container {
     -webkit-box-orient: vertical;

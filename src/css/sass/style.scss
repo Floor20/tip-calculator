@@ -73,6 +73,7 @@ body {
   input {
     @include input-icon("../../../images/icon-dollar.svg");
     padding: 0.8rem;
+    border: none;
 
     &:focus {
       border: 2px solid $display-color;
@@ -104,10 +105,6 @@ ul {
       color: $secondary-color;
       cursor: pointer;
     }
-
-    .custom-tip {
-      padding: 0.5rem;
-    }
   }
 }
 
@@ -122,13 +119,7 @@ ul {
   }
 
   &:hover {
-    background-color: $hover-color;
-    color: $secondary-color;
     cursor: pointer;
-  }
-
-  &:focus {
-    border: 2px solid $display-color;
   }
 }
 
@@ -162,6 +153,7 @@ ul {
   input {
     @include input-icon("../../../images/icon-person.svg");
     padding: 0.8rem;
+    border: none;
   }
 
   .people-row {
@@ -207,6 +199,10 @@ button {
 
 .last-btn-font {
   color: $font-color;
+}
+
+.last-btn-border {
+  border: 2px solid $display-color;
 }
 
 .err-border {

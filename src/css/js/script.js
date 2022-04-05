@@ -5,6 +5,7 @@ const tipTiles = document.querySelectorAll(".tip-tile");
 const tipText = document.querySelectorAll("a");
 const billField = document.getElementById("bill");
 const peopleField = document.getElementById("people-number");
+const customTipField = document.querySelector(".custom-tip");
 const tipAmount = document.querySelector(".tip-amount");
 const totalAmount = document.querySelector(".total-amount");
 const peopleErrMsg = document.querySelector(".people-err");
@@ -29,6 +30,7 @@ tipTiles.forEach((el) => {
     });
 
     renderTip();
+    console.log(typeof Number(customTipField.value));
   });
 });
 
@@ -36,11 +38,14 @@ const renderTip = function () {
   let tip;
   const bill = Number(billField.value);
   const people = Number(peopleField.value);
+  const customTip = Number(customTipField.value);
 
   tipTiles.forEach((tile) => {
     if (tile.classList.contains("btn-bg2")) {
       tip = parseInt(tile.textContent, 10) / 100;
     }
+
+    if (customTip) tip = customTip / 100;
 
     tipAmount.textContent =
       tipAmount.textContent == "$Infinity" ||
@@ -103,6 +108,8 @@ resetBtn.addEventListener("click", function () {
         tile.classList.replace("btn-font2", "btn-font1");
         tile.classList.add("tip-tile");
       }
+
+      if (customTipField.value) customTipField.value = "";
     });
   }
 });
