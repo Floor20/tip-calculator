@@ -14,22 +14,27 @@ li:focus {
     height: auto;
     padding: 1.5rem;
   }
+
   .data-side,
   .display-side {
     width: 100%;
   }
+
   .bill-section,
   .tip-section,
   .people-section {
     margin-bottom: 30px;
   }
+
   .display-side {
     padding: 2rem 1rem 1rem;
   }
+
   .tip-line,
   .total-line {
     margin-bottom: 30px;
   }
+
   .tip-amount,
   .total-amount {
     font-size: 1.7rem;
@@ -47,7 +52,7 @@ li:focus {
 }
 
 body {
-  background-color: hsl(185, 41%, 84%);
+  background-color: hsl(185deg, 41%, 84%);
   font-family: "Space Mono", sans-serif;
   font-weight: 700;
 }
@@ -56,7 +61,7 @@ body {
 /* CALCULATOR STYLES */
 /* ---------------------------------------------- */
 .calc-container {
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0deg, 0%, 100%);
   display: flex;
   position: fixed;
   width: 900px;
@@ -75,7 +80,7 @@ body {
 }
 
 .display-side {
-  background-color: hsl(183, 100%, 15%);
+  background-color: hsl(183deg, 100%, 15%);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -93,12 +98,12 @@ body {
 .input-list input {
   width: 100%;
   border-radius: 5px;
-  background-color: hsl(189, 41%, 97%);
-  color: hsl(186, 14%, 43%);
+  background-color: hsl(189deg, 41%, 97%);
+  color: hsl(186deg, 14%, 43%);
   font-family: "Space Mono", sans-serif;
   font-size: 1.2rem;
   text-align: right;
-  border: 2px solid hsl(189, 41%, 97%);
+  margin-top: 5px;
 }
 .input-list input:focus {
   outline: none;
@@ -106,19 +111,18 @@ body {
 
 .bill-section input {
   background: url("../../../images/icon-dollar.svg") no-repeat;
-  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(189deg, 41%, 97%);
   background-position: left 1em top 1em;
   padding: 0.8rem;
   border: none;
-  margin-top: 5px;
 }
 .bill-section input:focus {
-  border: 2px solid hsl(172, 67%, 45%);
+  border: 2px solid hsl(172deg, 67%, 45%);
 }
 
 label,
 p {
-  color: hsl(186, 14%, 43%);
+  color: hsl(186deg, 14%, 43%);
 }
 
 ul {
@@ -128,28 +132,29 @@ ul {
 .tip-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   margin-top: 10px;
 }
 .tip-grid .tip-tile:not(:last-child) {
   text-align: center;
+  padding: 0.5rem;
   border-radius: 5px;
   font-size: 1.2rem;
   transition: background-color 0.2s linear;
 }
 .tip-grid .tip-tile:not(:last-child):hover {
-  background-color: hsl(177, 63%, 71%);
-  color: hsl(183, 100%, 15%);
+  background-color: hsl(177deg, 63%, 71%);
+  color: hsl(183deg, 100%, 15%);
   cursor: pointer;
 }
 
 .tip-tile:last-child {
   text-align: center;
+  padding: 0.5rem;
   border-radius: 5px;
   font-size: 1.2rem;
   color: unset;
-  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(189deg, 41%, 97%);
   transition: background-color 0.2s linear;
 }
 .tip-tile:last-child a {
@@ -165,31 +170,30 @@ ul {
 
 .tip-line,
 .total-line {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
   display: flex;
   justify-content: space-between;
 }
 
 .tip-amount,
 .total-amount {
-  color: hsl(172, 67%, 45%);
+  color: hsl(172deg, 67%, 45%);
   font-size: 2.5rem;
   position: relative;
   bottom: 12px;
 }
 
 .amount-info li:nth-child(2) {
-  color: hsl(186, 14%, 43%);
+  color: hsl(186deg, 14%, 43%);
   font-size: 0.8rem;
 }
 
 .people-section input {
   background: url("../../../images/icon-person.svg") no-repeat;
-  background-color: hsl(189, 41%, 97%);
+  background-color: hsl(189deg, 41%, 97%);
   background-position: left 1em top 1em;
   padding: 0.8rem;
   border: none;
-  margin-top: 5px;
 }
 .people-section .people-row {
   display: flex;
@@ -199,17 +203,16 @@ ul {
 button {
   width: 100%;
   border-radius: 5px;
-  background-color: hsl(186, 57%, 33%);
-  color: hsl(183, 100%, 15%);
+  background-color: hsl(186deg, 57%, 33%);
+  color: hsl(183deg, 100%, 15%);
   font-weight: 700;
   text-transform: uppercase;
   transition: background-color 0.2s linear;
-  padding: 1rem;
-  border: none;
 }
+
 button:hover {
-  background-color: hsl(177, 63%, 71%);
-  color: hsl(183, 100%, 15%);
+  background-color: hsl(177deg, 63%, 71%);
+  color: hsl(183deg, 100%, 15%);
   cursor: pointer;
 }
 
@@ -217,38 +220,38 @@ button:hover {
 /* JS BEHAVIOR */
 /* ---------------------------------------------- */
 .btn-bg1 {
-  background-color: hsl(183, 100%, 15%);
+  background-color: hsl(183deg, 100%, 15%);
 }
 
 .btn-bg2 {
-  background-color: hsl(172, 67%, 45%);
+  background-color: hsl(172deg, 67%, 45%);
 }
 
 .btn-font1 {
-  color: hsl(0, 0%, 100%);
+  color: hsl(0deg, 0%, 100%);
 }
 
 .btn-font2 {
-  color: hsl(183, 100%, 15%);
+  color: hsl(183deg, 100%, 15%);
 }
 
 .last-btn-font {
-  color: hsl(186, 14%, 43%);
+  color: hsl(186deg, 14%, 43%);
 }
 
 .last-btn-border {
-  border: 2px solid hsl(172, 67%, 45%);
+  border: 2px solid hsl(172deg, 67%, 45%);
 }
 
 .err-border {
-  border: 2px solid hsl(0, 100%, 74%);
+  border: 2px solid hsl(0deg, 100%, 74%);
 }
 
 .people-err {
-  color: hsl(0, 100%, 74%);
+  color: hsl(0deg, 100%, 74%);
   text-align: right;
 }
 
 .hidden {
   display: none;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

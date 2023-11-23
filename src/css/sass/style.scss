@@ -61,7 +61,7 @@ body {
     font-family: $font-stack;
     font-size: 1.2rem;
     text-align: right;
-    margin-top: 5px;
+    border: 2px solid $input-background;
 
     &:focus {
       outline: none;
@@ -74,6 +74,7 @@ body {
     @include input-icon("../../../images/icon-dollar.svg");
     padding: 0.8rem;
     border: none;
+    margin-top: 5px;
 
     &:focus {
       border: 2px solid $display-color;
@@ -93,6 +94,7 @@ ul {
 .tip-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
   gap: 10px;
   margin-top: 10px;
 
@@ -154,6 +156,7 @@ ul {
     @include input-icon("../../../images/icon-person.svg");
     padding: 0.8rem;
     border: none;
+    margin-top: 5px;
   }
 
   .people-row {
@@ -169,6 +172,8 @@ button {
   font-weight: 700;
   text-transform: uppercase;
   transition: background-color 0.2s linear;
+  padding: 1rem;
+  border: none;
 
   &:hover {
     background-color: $hover-color;
