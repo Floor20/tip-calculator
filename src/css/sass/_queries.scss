@@ -10,6 +10,10 @@
     width: 100%;
   }
 
+  .calc-container .data-side {
+    padding-right: 0;
+  }
+
   .bill-section,
   .tip-section,
   .people-section {
@@ -32,6 +36,10 @@
 }
 
 @media only screen and (max-width: 375px) {
+  .calc-container {
+    padding: 1rem;
+  }
+
   .tip-grid {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -18,6 +18,9 @@ li:focus {
   .display-side {
     width: 100%;
   }
+  .calc-container .data-side {
+    padding-right: 0;
+  }
   .bill-section,
   .tip-section,
   .people-section {
@@ -36,6 +39,9 @@ li:focus {
   }
 }
 @media only screen and (max-width: 375px) {
+  .calc-container {
+    padding: 1rem;
+  }
   .tip-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -71,7 +77,7 @@ body {
 
 .data-side {
   min-width: 50%;
-  margin-right: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .display-side {
