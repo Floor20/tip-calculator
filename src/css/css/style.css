@@ -39,8 +39,11 @@ li:focus {
   }
 }
 @media only screen and (max-width: 375px) {
-  .calc-container {
+  body .calc-container {
     padding: 1rem;
+  }
+  .calc-container .display-side {
+    padding: 2rem 1rem 1rem;
   }
   .tip-grid {
     grid-template-columns: repeat(2, 1fr);
