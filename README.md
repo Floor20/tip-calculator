@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Screenshot
 
-![](../../Screenshot%202023-11-25%20at%2015-19-28%20Frontend%20Mentor%20Tip%20calculator%20app.png)
+![](https://github.com/Floor20/tip-calculator/assets/28377567/bf8cf38d-0695-4a4e-9f40-b79a4c0f81f4)
 
 ### Links
 
